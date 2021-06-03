@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedAreaChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseworkapp.ChartADollarController">
+   <children>
+      <ImageView fx:id="logo" fitHeight="58.0" fitWidth="68.0" layoutX="14.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sources/logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buyADollarBtnChart" layoutX="220.0" layoutY="525.0" mnemonicParsing="false" onAction="#handleButtonADollarBuy" prefHeight="36.0" prefWidth="90.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Buy" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="sellADollarBtnChart" layoutX="374.0" layoutY="525.0" mnemonicParsing="false" onAction="#handleButtonADollarSell" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Sell" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="mycabBtn" layoutX="14.0" layoutY="110.0" mnemonicParsing="false" onAction="#myCabBtnHndlr" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="My cabinet" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="currencyBtn" layoutX="14.0" layoutY="160.0" mnemonicParsing="false" onAction="#currencyBtnHandler" prefHeight="36.0" prefWidth="82.0" style="-fx-background-radius: 12; -fx-background-color: #4A0B78;" text="Currency" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="yearChartBtn" layoutX="14.0" layoutY="214.0" mnemonicParsing="false" onAction="#yearChartHandler" prefHeight="36.0" prefWidth="82.0" style="-fx-background-radius: 12; -fx-background-color: #4A0B78;" text="Year Chart" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="dayChartBtn" layoutX="14.0" layoutY="265.0" mnemonicParsing="false" onAction="#dayChartHndlr" prefHeight="36.0" prefWidth="82.0" style="-fx-background-radius: 12; -fx-background-color: #4A0B78;" text="Day Chart" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="weekChartBtn" layoutX="14.0" layoutY="320.0" mnemonicParsing="false" onAction="#weekChartHandler" prefHeight="36.0" prefWidth="90.0" style="-fx-background-radius: 12; -fx-background-color: #4A0B78;" text="Week Chart" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="11.0" />
+         </font>
+      </Button>
+      <GridPane layoutX="13.0" layoutY="395.0" prefHeight="121.0" prefWidth="119.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Open" />
+            <Label text="Low" GridPane.rowIndex="1" />
+            <Label text="High" GridPane.rowIndex="2" />
+            <Label text="Close" GridPane.rowIndex="3" />
+            <Label text="Volume" GridPane.rowIndex="4" />
+            <Label text="\% Change" GridPane.rowIndex="5" />
+            <Label text="1.654" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Label text="1.536" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="2.34" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label text="0.14" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label text="2.51" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label text="91%" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <StackedAreaChart fx:id="stackAreaChartADollar" layoutX="117.0" layoutY="70.0" prefHeight="427.0" prefWidth="560.0">
+         <xAxis>
+            <NumberAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </StackedAreaChart>
+      <MenuBar fx:id="menubarChartPound" layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <menus>
+            <Menu id="atmMenuItem" mnemonicParsing="false" text="ATM">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="ATM Card" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Savings">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Savings Account" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Transaction">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Sales" />
+                  <MenuItem mnemonicParsing="false" text="Purchases" />
+                  <MenuItem mnemonicParsing="false" text="Receipts" />
+                  <MenuItem mnemonicParsing="false" text="Payments" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Monthly Statistics" />
+            <Menu mnemonicParsing="false" text="Bank Loans">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Foreign exchange">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

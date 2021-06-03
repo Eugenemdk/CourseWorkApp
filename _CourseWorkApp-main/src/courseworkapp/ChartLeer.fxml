@@ -15,20 +15,21 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="611.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseworkapp.ChartPoundController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseworkapp.ChartLeerController">
    <children>
-      <ImageView fx:id="logo" fitHeight="61.0" fitWidth="67.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="logo" fitHeight="61.0" fitWidth="67.0" layoutX="34.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sources/logo.png" />
          </image>
       </ImageView>
-      <StackedAreaChart fx:id="stackAreaChartPound" layoutX="110.0" layoutY="92.0" prefHeight="427.0" prefWidth="560.0">
-        <xAxis>
-          <NumberAxis side="BOTTOM" />
-        </xAxis>
-        <yAxis>
-          <NumberAxis side="LEFT" />
-        </yAxis>
+      <StackedAreaChart fx:id="stackAreaChartLeer" layoutX="130.0" layoutY="112.0" prefHeight="427.0" prefWidth="560.0">
+         <xAxis>
+            <NumberAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
       </StackedAreaChart>
       <MenuBar fx:id="menubarChartPound" layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <menus>
@@ -63,59 +64,54 @@
             </Menu>
          </menus>
       </MenuBar>
-      <Button fx:id="buyPoundBtnChart" layoutX="210.0" layoutY="556.0" mnemonicParsing="false" onAction="#switchToSubmissionForm" onMouseClicked="#handleButtonPoundBuy" prefHeight="36.0" prefWidth="90.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Buy" textFill="WHITE">
+      <Button fx:id="buyLeerBtnChart" layoutX="230.0" layoutY="576.0" mnemonicParsing="false" onAction="#handleButtonLeerBuy" prefHeight="36.0" prefWidth="90.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Buy" textFill="WHITE">
          <font>
             <Font name="Cooper Black" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="sellPoundBtnChart" layoutX="364.0" layoutY="556.0" mnemonicParsing="false" onAction="#handleButtonPoundSell" onMouseClicked="#handleButtonPoundSell" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Sell" textFill="WHITE">
+      <Button fx:id="sellLeerBtnChart" layoutX="384.0" layoutY="576.0" mnemonicParsing="false" onAction="#handleButtonLeerSell" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Sell" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="11.0" />
          </font>
       </Button>
-      <Label layoutX="228.0" layoutY="58.0" text="Pound chart of last three month:">
-         <font>
-            <Font name="Baskerville Old Face" size="20.0" />
-         </font>
-      </Label>
-      <Button layoutX="4.0" layoutY="96.0" mnemonicParsing="false" onAction="#myCabBtnHndlr" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="My cabinet" textFill="WHITE">
+      <Button layoutX="24.0" layoutY="116.0" mnemonicParsing="false" onAction="#myCabBtnHndlr" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="My cabinet" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="11.0" />
          </font>
       </Button>
-      <Button layoutX="4.0" layoutY="146.0" mnemonicParsing="false" onAction="#currencyBtnHandler" prefHeight="36.0" prefWidth="82.0" style="-fx-background-radius: 12; -fx-background-color: #4A0B78;" text="Currency" textFill="WHITE">
+      <Button layoutX="24.0" layoutY="166.0" mnemonicParsing="false" onAction="#currencyBtnHandler" prefHeight="36.0" prefWidth="82.0" style="-fx-background-radius: 12; -fx-background-color: #4A0B78;" text="Currency" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="11.0" />
          </font>
       </Button>
-      <Button layoutX="4.0" layoutY="200.0" mnemonicParsing="false" onAction="#yearChartHandler" prefHeight="36.0" prefWidth="82.0" style="-fx-background-radius: 12; -fx-background-color: #4A0B78;" text="Year Chart" textFill="WHITE">
+      <Button layoutX="24.0" layoutY="220.0" mnemonicParsing="false" onAction="#yearChartHandler" prefHeight="36.0" prefWidth="82.0" style="-fx-background-radius: 12; -fx-background-color: #4A0B78;" text="Year Chart" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="11.0" />
          </font>
       </Button>
-      <Button layoutX="4.0" layoutY="251.0" mnemonicParsing="false" onAction="#dayChartHndlr" prefHeight="36.0" prefWidth="82.0" style="-fx-background-radius: 12; -fx-background-color: #4A0B78;" text="Day Chart" textFill="WHITE">
+      <Button layoutX="24.0" layoutY="271.0" mnemonicParsing="false" onAction="#dayChartHndlr" prefHeight="36.0" prefWidth="82.0" style="-fx-background-radius: 12; -fx-background-color: #4A0B78;" text="Day Chart" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="11.0" />
          </font>
       </Button>
-      <Button layoutX="4.0" layoutY="306.0" mnemonicParsing="false" onAction="#weekChartHandler" prefHeight="36.0" prefWidth="90.0" style="-fx-background-radius: 12; -fx-background-color: #4A0B78;" text="Week Chart" textFill="WHITE">
+      <Button layoutX="24.0" layoutY="326.0" mnemonicParsing="false" onAction="#weekChartHandler" prefHeight="36.0" prefWidth="90.0" style="-fx-background-radius: 12; -fx-background-color: #4A0B78;" text="Week Chart" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="11.0" />
          </font>
       </Button>
-      <GridPane layoutX="14.0" layoutY="414.0" prefHeight="121.0" prefWidth="119.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <GridPane layoutX="26.0" layoutY="427.0" prefHeight="121.0" prefWidth="119.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
          <children>
             <Label text="Open" />
             <Label text="Low" GridPane.rowIndex="1" />

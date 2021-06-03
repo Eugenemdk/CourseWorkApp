@@ -17,36 +17,32 @@
 
 <AnchorPane id="AnchorPane" prefHeight="489.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseworkapp.ForexController">
    <children>
-      <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <MenuBar fx:id="myMenuBar" layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <menus>
           <Menu id="atmMenuItem" mnemonicParsing="false" text="ATM">
             <items>
-              <MenuItem mnemonicParsing="false" text="ATM Card" />
+              <MenuItem fx:id="ATMCardMenuItem" mnemonicParsing="false" onAction="#handleATMCardCreate" text="ATM Card" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Savings">
             <items>
-              <MenuItem mnemonicParsing="false" text="Savings Account" />
+              <MenuItem fx:id="savingsAccMenuItem" mnemonicParsing="false" onAction="#handleCreateSavingsAcc" text="Savings Account" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Transaction">
             <items>
-              <MenuItem mnemonicParsing="false" text="Sales" />
-                  <MenuItem mnemonicParsing="false" text="Purchases" />
-                  <MenuItem mnemonicParsing="false" text="Receipts" />
-                  <MenuItem mnemonicParsing="false" text="Payments" />
+              <MenuItem fx:id="salesMenuItem" mnemonicParsing="false" onAction="#handleSalesMenuItem" text="Sales" />
+                  <MenuItem fx:id="purchaseMenuItem" mnemonicParsing="false" onAction="#handlePurchaseMenuItem" text="Purchases" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="Monthly Statistics" />
-            <Menu mnemonicParsing="false" text="Bank Loans">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-              </items>
-            </Menu>
+            <Menu fx:id="monthStatMenu" mnemonicParsing="false" text="Monthly Statistics">
+               <items>
+                  <MenuItem fx:id="monthStatMenu" mnemonicParsing="false" onAction="#handleMonthStat" text="Show Monthly Stats" />
+               </items></Menu>
             <Menu mnemonicParsing="false" text="Foreign exchange">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-              </items>
+               <items>
+                  <MenuItem fx:id="forexMenu" mnemonicParsing="false" onAction="#handleForexMenu" text="Show Forex Market" />
+               </items>
             </Menu>
         </menus>
       </MenuBar>
@@ -234,12 +230,12 @@
                               <Font name="Castellar" size="14.0" />
                            </font>
                         </Text>
-                        <Button fx:id="buyPoundBtn1" mnemonicParsing="false" onAction="#openChartPound" onMouseClicked="#handleButtonPoundBuy" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Open chart" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                        <Button fx:id="chartPound" mnemonicParsing="false" onAction="#openChartPound" onMouseClicked="#handleButtonPoundBuy" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Open chart" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                            <font>
                               <Font name="Arial Black" size="10.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buyPoundBtn11" mnemonicParsing="false" onAction="#switchToSubmissionForm" onMouseClicked="#handleButtonPoundBuy" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Open chart" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                        <Button fx:id="chartCDDollar" mnemonicParsing="false" onAction="#openChartCDDollarbuy" onMouseClicked="#handleButtonPoundBuy" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Open chart" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                            <font>
                               <Font name="Arial Black" size="10.0" />
                            </font>
@@ -294,22 +290,22 @@
                               <Font name="Cooper Black" size="10.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buyPoundBtn111" mnemonicParsing="false" onAction="#switchToSubmissionForm" onMouseClicked="#handleButtonPoundBuy" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Open chart" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                        <Button fx:id="chartRuppee" mnemonicParsing="false" onAction="#openChartRuppeeBuy" onMouseClicked="#handleButtonPoundBuy" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Open chart" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                            <font>
                               <Font name="Arial Black" size="10.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buyPoundBtn112" mnemonicParsing="false" onAction="#switchToSubmissionForm" onMouseClicked="#handleButtonPoundBuy" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Open chart" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                        <Button fx:id="chartLeer" mnemonicParsing="false" onAction="#openChartLeerBuy" onMouseClicked="#handleButtonPoundBuy" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Open chart" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4">
                            <font>
                               <Font name="Arial Black" size="10.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buyPoundBtn113" mnemonicParsing="false" onAction="#switchToSubmissionForm" onMouseClicked="#handleButtonPoundBuy" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Open chart" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                        <Button fx:id="chartADollar" mnemonicParsing="false" onAction="#openChartADollarbuy" onMouseClicked="#handleButtonPoundBuy" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Open chart" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5">
                            <font>
                               <Font name="Arial Black" size="10.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buyPoundBtn114" mnemonicParsing="false" onAction="#switchToSubmissionForm" onMouseClicked="#handleButtonPoundBuy" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Open chart" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                        <Button fx:id="chartForent" mnemonicParsing="false" onAction="#openChartForentbuy" onMouseClicked="#handleButtonPoundBuy" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #4A0B78; -fx-background-radius: 12;" text="Open chart" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6">
                            <font>
                               <Font name="Arial Black" size="10.0" />
                            </font>

@@ -23,12 +23,17 @@ public class ChartPoundController implements Initializable {
     private Scene scene;
     @FXML
     private Button buyPoundBtn;
+    @FXML
+    private Button buyPoundBtnChart;
+
+    @FXML
+    private Button sellPoundBtnChart;
     
     @FXML
     private StackedAreaChart<String, NumberAxis> stackAreaChartPound;
     @FXML
     void handleButtonPoundBuy(MouseEvent event) throws IOException {
-  page=FXMLLoader.load(getClass().getResource("FormSubmission.fxml"));
+    		page=FXMLLoader.load(getClass().getResource("FormSubmission.fxml"));
             stage=(Stage)((Node)event.getSource()).getScene().getWindow();
             scene=new Scene(page);
             stage.setScene(scene);
@@ -36,9 +41,14 @@ public class ChartPoundController implements Initializable {
     }
 
     @FXML
-    void handleButtonPoundSell(MouseEvent event) {
-
-    }
+    void handleButtonPoundSell(ActionEvent event) throws IOException {
+    	  page=FXMLLoader.load(getClass().getResource("ForexSellForm.fxml"));
+          stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+          scene=new Scene(page);
+          stage.setScene(scene);
+          stage.show();
+  }
+    
 
     @FXML
     void switchToSubmissionForm(ActionEvent event) {
@@ -48,7 +58,7 @@ public class ChartPoundController implements Initializable {
     
     @FXML
     void currencyBtnHandler(ActionEvent event) throws IOException {
-  page=FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+    		page=FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
             stage=(Stage)((Node)event.getSource()).getScene().getWindow();
             scene=new Scene(page);
             stage.setScene(scene);
@@ -61,7 +71,7 @@ public class ChartPoundController implements Initializable {
     }
       @FXML
     void myCabBtnHndlr(ActionEvent event) throws IOException {
-          page=FXMLLoader.load(getClass().getResource("ChartPound.fxml"));
+          	page=FXMLLoader.load(getClass().getResource("ChartPound.fxml"));
             stage=(Stage)((Node)event.getSource()).getScene().getWindow();
             scene=new Scene(page);
             stage.setScene(scene);

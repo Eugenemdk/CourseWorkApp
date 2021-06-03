@@ -18,6 +18,8 @@ public class SubmitMessageController {
     private Stage stage;
     private Scene scene;
     
+    
+    
     @FXML
     void okBackBtnHandler(ActionEvent event) throws IOException {
       page=FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));

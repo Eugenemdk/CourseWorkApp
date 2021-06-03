@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="828.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseworkapp.SalesFXMLController">
+   <children>
+      <TableView fx:id="tableSales" layoutX="141.0" layoutY="56.0" prefHeight="369.0" prefWidth="664.0">
+        <columns>
+          <TableColumn fx:id="firstnameTC" prefWidth="61.0" text="Firstname" />
+          <TableColumn fx:id="surnameTC" prefWidth="74.0" text="Surname" />
+            <TableColumn fx:id="stateSale" prefWidth="77.0" text="State" />
+            <TableColumn fx:id="citySale" prefWidth="88.0" text="City" />
+            <TableColumn fx:id="typePaymentSale" prefWidth="75.0" text="Payment" />
+            <TableColumn fx:id="amountSale" prefWidth="82.0" text="Amount" />
+            <TableColumn fx:id="cardSale" prefWidth="77.0" text="Card" />
+            <TableColumn fx:id="currencySale" prefWidth="129.0" text="Currency" />
+        </columns>
+      </TableView>
+      <Button fx:id="cityBtnOrder" layoutX="14.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleOrderByCitySale" text="Order by city" />
+      <Button fx:id="orderByStateSale" layoutX="13.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleOrderByStateSale" text="Order by state" />
+      <Button fx:id="orderByPaySale" layoutX="13.0" layoutY="147.0" mnemonicParsing="false" onAction="#handleOrderByPaySale" text="Order by type of pay" />
+      <Button fx:id="orderByAmountSale" layoutX="13.0" layoutY="179.0" mnemonicParsing="false" onAction="#handleOrderByAmountSale" text="Order by amount" />
+      <Button fx:id="orderByCurrencySale" layoutX="12.0" layoutY="213.0" mnemonicParsing="false" onAction="#handleOrderByCurrencySale" text="Order by currency" />
+      <ImageView fitHeight="76.0" fitWidth="61.0" layoutX="23.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sources/logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="mainPageBtn" layoutX="14.0" layoutY="253.0" mnemonicParsing="false" onAction="#gotoMainPageSales" text="Go to main page" />
+   </children>
+</AnchorPane>

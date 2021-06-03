@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="645.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseworkapp.FormSubmissionController">
+<AnchorPane id="AnchorPane" prefHeight="645.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseworkapp.FormSubmissionController">
    <children>
       <Label layoutX="75.0" layoutY="27.0" prefHeight="33.0" prefWidth="290.0" text="Submit purchase:">
          <font>
@@ -22,10 +22,9 @@
       <ChoiceBox fx:id="stateChoiceBox" layoutX="106.0" layoutY="211.0" prefHeight="25.0" prefWidth="225.0" />
       <TextArea fx:id="cityTextArea" layoutX="106.0" layoutY="255.0" prefHeight="32.0" prefWidth="225.0" />
       <ChoiceBox fx:id="payChoiceBox" layoutX="165.0" layoutY="312.0" prefHeight="25.0" prefWidth="225.0" />
-      <Slider fx:id="amountSlide" layoutX="165.0" layoutY="367.0" />
       <ChoiceBox fx:id="cardChoiceBox" layoutX="151.0" layoutY="402.0" prefHeight="25.0" prefWidth="225.0" />
-      <Button fx:id="submitBtn" layoutX="117.0" layoutY="511.0" mnemonicParsing="false" onAction="#submitAction" text="Submit" />
-      <Button fx:id="declinelbl" layoutX="238.0" layoutY="511.0" mnemonicParsing="false" onMouseClicked="#declineBtn" text="Decline" />
+      <Button fx:id="submitBtn" layoutX="107.0" layoutY="542.0" mnemonicParsing="false" onAction="#submitAction" text="Submit" />
+      <Button fx:id="declinelbl" layoutX="236.0" layoutY="542.0" mnemonicParsing="false" onMouseClicked="#declineBtn" text="Decline" />
       <Label fx:id="namelbl" layoutX="27.0" layoutY="102.0" prefHeight="17.0" prefWidth="49.0" text="Name:">
          <font>
             <Font name="Arial" size="15.0" />
@@ -61,17 +60,17 @@
             <Font name="Arial" size="15.0" />
          </font>
       </Label>
-      <ImageView fitHeight="37.0" fitWidth="56.0" layoutX="106.0" layoutY="448.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="37.0" fitWidth="56.0" layoutX="106.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sources/Visa.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="57.0" fitWidth="77.0" layoutX="175.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="57.0" fitWidth="77.0" layoutX="184.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sources/Mastercard.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="243.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="259.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sources/Paypal.png" />
          </image>
@@ -81,5 +80,13 @@
             <Image url="@../sources/logo.png" />
          </image>
       </ImageView>
+      <Slider fx:id="amountSlide" layoutX="120.0" layoutY="367.0" max="10000.0" prefHeight="14.0" prefWidth="185.0" />
+      <Label fx:id="amountLabel" layoutX="331.0" layoutY="366.0" prefHeight="17.0" prefWidth="88.0" />
+      <ChoiceBox fx:id="currencyChoiceBox" layoutX="151.0" layoutY="444.0" prefHeight="25.0" prefWidth="225.0" />
+      <Label fx:id="type_currency" layoutX="34.0" layoutY="448.0" text="Type of currency:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

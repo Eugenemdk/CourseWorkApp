@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="828.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseworkapp.PurchaseFXMLController">
+   <children>
+      <Button fx:id="cityBtnOrderPurchase" layoutX="24.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleOrderByCityPurchase" text="Order by city" />
+      <Button fx:id="orderByStatePurchase" layoutX="23.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleOrderByStatePurchase" text="Order by state" />
+      <Button fx:id="orderByPayPurchase" layoutX="23.0" layoutY="157.0" mnemonicParsing="false" onAction="#handleOrderByPayPurchase" text="Order by type of pay" />
+      <Button fx:id="orderByAmountPurchase" layoutX="23.0" layoutY="189.0" mnemonicParsing="false" onAction="#handleOrderByAmountPurchase" text="Order by amount" />
+      <Button fx:id="orderByCurrencyPurchase" layoutX="22.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleOrderByCurrencyPurchase" text="Order by currency" />
+      <ImageView fitHeight="76.0" fitWidth="61.0" layoutX="33.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sources/logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="mainPageBtnPurchase" layoutX="24.0" layoutY="263.0" mnemonicParsing="false" onAction="#gotoMainPageSalesPurchase" text="Go to main page" />
+      <TableView fx:id="tablePurchase" layoutX="157.0" layoutY="57.0" prefHeight="369.0" prefWidth="664.0">
+        <columns>
+          <TableColumn fx:id="firstnamePurchaseTC" prefWidth="75.0" text="Firstname" />
+          <TableColumn fx:id="surnamePurchaseTC" prefWidth="75.0" text="Surname" />
+            <TableColumn fx:id="statePurchaseTC" prefWidth="75.0" text="State" />
+            <TableColumn fx:id="cityPurchaseTC" prefWidth="75.0" text="City" />
+            <TableColumn fx:id="paymentPurchaseTC" prefWidth="75.0" text="Payment" />
+            <TableColumn fx:id="amountPurchaseTC" prefWidth="75.0" text="Amount" />
+            <TableColumn fx:id="cardPurchaseTC" prefWidth="75.0" text="Card" />
+            <TableColumn fx:id="currencyPurchaseTC" prefWidth="138.0" text="Currency" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

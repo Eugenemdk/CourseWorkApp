@@ -57,29 +57,36 @@
             <Font name="Arial" size="15.0" />
          </font>
       </Label>
-      <TextArea fx:id="nameTextArea" layoutX="116.0" layoutY="95.0" prefHeight="17.0" prefWidth="202.0" />
-      <TextArea fx:id="surnameTextArea" layoutX="116.0" layoutY="137.0" prefHeight="17.0" prefWidth="202.0" />
-      <TextArea fx:id="cityTextArea" layoutX="121.0" layoutY="226.0" prefHeight="17.0" prefWidth="202.0" />
-      <ChoiceBox fx:id="stateChoiceBox" layoutX="121.0" layoutY="189.0" prefHeight="25.0" prefWidth="192.0" />
-      <ChoiceBox fx:id="paymentChoiceBox" layoutX="145.0" layoutY="273.0" prefHeight="25.0" prefWidth="192.0" />
-      <ChoiceBox fx:id="cardChoiceBox" layoutX="121.0" layoutY="349.0" prefHeight="25.0" prefWidth="192.0" />
-      <Slider fx:id="amountSlide" layoutX="121.0" layoutY="317.0" />
-      <ImageView fitHeight="50.0" fitWidth="57.0" layoutX="65.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+      <TextArea fx:id="nameTextAreaSell" layoutX="116.0" layoutY="95.0" prefHeight="17.0" prefWidth="202.0" />
+      <TextArea fx:id="surnameTextAreaSell" layoutX="116.0" layoutY="137.0" prefHeight="17.0" prefWidth="202.0" />
+      <TextArea fx:id="cityTextAreaSell" layoutX="121.0" layoutY="226.0" prefHeight="17.0" prefWidth="202.0" />
+      <ChoiceBox fx:id="stateChoiceBoxSell" layoutX="121.0" layoutY="189.0" prefHeight="25.0" prefWidth="192.0" />
+      <ChoiceBox fx:id="paymentChoiceBoxSell" layoutX="145.0" layoutY="273.0" prefHeight="25.0" prefWidth="192.0" />
+      <ChoiceBox fx:id="cardChoiceBoxSell" layoutX="121.0" layoutY="349.0" prefHeight="25.0" prefWidth="192.0" />
+      <Slider fx:id="amountSlideSell" layoutX="121.0" layoutY="317.0" max="10000.0" />
+      <ImageView fitHeight="50.0" fitWidth="57.0" layoutX="62.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sources/Mastercard.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="35.0" fitWidth="50.0" layoutX="145.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="35.0" fitWidth="50.0" layoutX="142.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sources/Visa.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="50.0" fitWidth="57.0" layoutX="222.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="50.0" fitWidth="57.0" layoutX="219.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sources/Paypal.png" />
          </image>
       </ImageView>
-      <Button fx:id="submitBtn" layoutX="90.0" layoutY="480.0" mnemonicParsing="false" onAction="#submitAction" text="Submit" />
-      <Button fx:id="declineBtn" layoutX="215.0" layoutY="480.0" mnemonicParsing="false" onAction="#declineAction" text="Decline" />
+      <Button fx:id="submitBtnSell" layoutX="87.0" layoutY="513.0" mnemonicParsing="false" onAction="#submitActionSell" text="Submit" />
+      <Button fx:id="declineBtn" layoutX="212.0" layoutY="513.0" mnemonicParsing="false" onAction="#declineAction" text="Decline" />
+      <Label fx:id="currencyType" layoutX="7.0" layoutY="388.0" text="Type of currency:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="currencySellChoiceBoxSell" layoutX="126.0" layoutY="384.0" prefHeight="25.0" prefWidth="192.0" />
+      <Label fx:id="amountSellLabel" layoutX="276.0" layoutY="316.0" prefHeight="17.0" prefWidth="78.0" />
    </children>
 </AnchorPane>
